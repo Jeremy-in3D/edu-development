@@ -39,7 +39,7 @@ const cloudAPISecret = process.env.CLOUD_API_SECRET || "";
 cloudinary.config({
     cloud_name: cloudName,
     api_key: cloudAPIKey,
-    api_secret: cloudAPISecret, // "2SdKyLiAzSmS1R81eMNYXD-obBw",
+    api_secret: cloudAPISecret,
 });
 // Function to clear the uploads folder
 const clearUploadsFolder = () => {

@@ -13,7 +13,6 @@ import { v2 as cloudinary } from "cloudinary";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { dirname } from "path";
 import { getPhotos } from "./routes/lessons/getPhotos.js";
 import {
   loginValidateMiddleware,
@@ -23,14 +22,12 @@ import {
   signupValidateMiddleware,
   userSchemaSignup,
 } from "./routes/auth/validation/signupValidation.js";
-import { createOrg } from "./createOrganization.js";
 import { getOrgMembers } from "./routes/orgs/getOrgMembers.js";
 import { verifyToken } from "./routes/auth/validation/jwtValidation.js";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import { BlobServiceClient } from "@azure/storage-blob";
-import crypto from "crypto";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -52,9 +49,9 @@ const cloudAPIKey = process.env.CLOUD_API_KEY || "";
 const cloudAPISecret = process.env.CLOUD_API_SECRET || "";
 
 cloudinary.config({
-  cloud_name: cloudName, // "dxminwnb3",
-  api_key: cloudAPIKey, // "452779743532375",
-  api_secret: cloudAPISecret, // "2SdKyLiAzSmS1R81eMNYXD-obBw",
+  cloud_name: cloudName,
+  api_key: cloudAPIKey,
+  api_secret: cloudAPISecret,
 });
 
 // Function to clear the uploads folder
