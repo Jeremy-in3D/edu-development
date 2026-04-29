@@ -12,6 +12,9 @@
     "local:watch": "nodemon src -e ts,json --exec 'npm run local'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
