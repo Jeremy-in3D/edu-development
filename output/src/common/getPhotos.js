@@ -1,12 +1,4 @@
 // import { v2 as cloudinary } from "cloudinary";
-// cloudinary.config({
-//   cloud_name: "dxminwnb3",
-//   api_key: "452779743532375",
-//   api_secret: "2SdKyLiAzSmS1R81eMNYXD-obBw",
-// });
-// cloudinary.v2.uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
-//   { public_id: "olympic_flag" },
-//   function(error, result) {console.log(result); });
 // Require the cloudinary library
 const cloudinary = require("cloudinary").v2;
 // Return "https" URLs by setting secure: true

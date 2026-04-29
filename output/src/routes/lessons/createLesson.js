@@ -4,9 +4,9 @@ import fs from "fs";
 import { v2 as cloudinary } from "cloudinary";
 import { clearUploadsFolder } from "./logic/clearImages.js";
 cloudinary.config({
-    cloud_name: "dxminwnb3",
-    api_key: "452779743532375",
-    api_secret: "2SdKyLiAzSmS1R81eMNYXD-obBw",
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.CLOUD_API_KEY,
+    api_secret: process.env.CLOUD_API_SECRET,
 });
 export async function createLesson(req, res) {
     const { headline, description, instructions, language, class: classAgeGroup, userId, orgCode, } = req.body;
