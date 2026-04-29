@@ -5,8 +5,7 @@
 
     "module": "ESNext",
     "rootDir": "./",                               
-    "moduleResolution":"node", 
-    "ignoreDeprecations": "6.0",
+    "moduleResolution":"bundler", 
 
     "outDir": "./output",                                  
     "esModuleInterop": true,                            
